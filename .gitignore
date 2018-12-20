@@ -2,5 +2,7 @@
 *.log
 /target
 /bin
+/test-output
 .classpath
 .project
+.idea/
