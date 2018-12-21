@@ -30,7 +30,7 @@ public class PowTest {
     }
 
     @Parameterized.Parameters
-    public static Collection param() {
+    public static Collection<Object[]> param() {
         return Arrays.asList(new Object[][]{
                 {1.0, 1.0, 1.0},
                 {2.5, 3, 15.625},
