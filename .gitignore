@@ -2,7 +2,9 @@
 *.log
 /target
 /bin
-/test-output
+test-output/
 .classpath
 .project
 .idea/
+*.iml
+*.html
