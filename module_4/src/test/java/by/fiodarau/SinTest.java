@@ -18,11 +18,6 @@ public class SinTest extends BaseCalculationTest {
         };
     }
 
-    @BeforeTest
-    public  void initCalc(){
-        calculator = new Calculator();
-    }
-
     @Test(dataProvider = "dataProviderForSin", groups = "Trigonometry")
     public void testSin(Object aObj, Object expObj) {
         try {
