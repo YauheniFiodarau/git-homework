@@ -1,6 +1,8 @@
 package by.fiodarau;
 
+import com.epam.tat.module4.Calculator;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import util.Converter;
@@ -14,6 +16,11 @@ public class SinTest extends BaseCalculationTest {
                 {Math.PI / 2.0, 1.0},
                 {"0", "0"}
         };
+    }
+
+    @BeforeTest
+    public  void initCalc(){
+        calculator = new Calculator();
     }
 
     @Test(dataProvider = "dataProviderForSin", groups = "Trigonometry")
