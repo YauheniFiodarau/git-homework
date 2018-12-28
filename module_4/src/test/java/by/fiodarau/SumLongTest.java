@@ -23,7 +23,7 @@ public class SumLongTest extends BaseCalculationTest {
             long a = Converter.toLong(aObj);
             long b = Converter.toLong(bObj);
             long expected = Converter.toLong(expObj);
-            long actual = calculator.sum(a, b);
+            long actual = getCalculatorInstance().sum(a, b);
             Assert.assertEquals(actual, expected);
         } catch (NumberFormatException e) {
             Assert.fail(e.getMessage());

@@ -22,7 +22,7 @@ public class DivLongTest extends BaseCalculationTest {
             long a = Converter.toLong(aObj);
             long b = Converter.toLong(bObj);
             long expected = Converter.toLong(expObj);
-            long actual = calculator.div(a, b);
+            long actual = getCalculatorInstance().div(a, b);
             Assert.assertEquals(actual, expected);
         } catch (NumberFormatException e) {
             Assert.fail(e.getMessage());
@@ -31,7 +31,7 @@ public class DivLongTest extends BaseCalculationTest {
 
     @Test(expectedExceptions = NumberFormatException.class)
     public void testDivLongByZero() {
-        calculator.div(5, 0);
+    	getCalculatorInstance().div(5, 0);
     }
 
 }

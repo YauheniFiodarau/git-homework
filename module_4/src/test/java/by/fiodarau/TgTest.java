@@ -21,7 +21,7 @@ public class TgTest extends BaseCalculationTest {
         try {
             double a = Converter.toDouble(aObj);
             double expected = Converter.toDouble(expObj);
-            double actual = calculator.tg(a);
+            double actual = getCalculatorInstance().tg(a);
             double delta = 0.0;
             Assert.assertEquals(actual, expected, delta);
         } catch (NumberFormatException e) {
@@ -31,6 +31,6 @@ public class TgTest extends BaseCalculationTest {
 
     @Test
     public void testForTgInfinity() {
-        Assert.assertTrue(Double.isInfinite(calculator.tg(Math.PI / 2)));
+        Assert.assertTrue(Double.isInfinite(getCalculatorInstance().tg(Math.PI / 2)));
     }
 }

@@ -23,7 +23,7 @@ public class SubDoubleTest extends BaseCalculationTest {
             double a = Converter.toDouble(aObj);
             double b = Converter.toDouble(bObj);
             double expected = Converter.toDouble(expObj);
-            double actual = calculator.sub(a, b);
+            double actual = getCalculatorInstance().sub(a, b);
             Assert.assertEquals(actual, expected);
         } catch (NumberFormatException e) {
             Assert.fail(e.getMessage());

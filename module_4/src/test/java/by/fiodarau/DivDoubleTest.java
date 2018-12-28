@@ -24,7 +24,7 @@ public class DivDoubleTest extends BaseCalculationTest {
             double b = Converter.toDouble(bObj);
             double expected = Converter.toDouble(expObj);
             double delta = 0.0;
-            double actual = calculator.div(a, b);
+            double actual = getCalculatorInstance().div(a, b);
             Assert.assertEquals(actual, expected, delta);
         } catch (NumberFormatException e) {
             Assert.fail(e.getMessage());
@@ -33,6 +33,6 @@ public class DivDoubleTest extends BaseCalculationTest {
 
     @Test
     public void testDivDoubleByZero() {
-        Assert.assertTrue(Double.isInfinite(calculator.div(5.25, 0.0)));
+        Assert.assertTrue(Double.isInfinite(getCalculatorInstance().div(5.25, 0.0)));
     }
 }

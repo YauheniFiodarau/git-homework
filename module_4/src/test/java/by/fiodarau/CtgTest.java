@@ -21,7 +21,7 @@ public class CtgTest extends BaseCalculationTest {
         try {
             double a = Converter.toDouble(aObj);
             double expected = Converter.toDouble(expObj);
-            double actual = calculator.ctg(a);
+            double actual = getCalculatorInstance().ctg(a);
             double delta = 0.0;
             Assert.assertEquals(actual, expected, delta);
         } catch (NumberFormatException e) {

@@ -22,7 +22,7 @@ public class SqrtTest extends BaseCalculationTest {
         try {
             double a = Converter.toDouble(aObj);
             double expected = Converter.toDouble(expObj);
-            double actual = calculator.sqrt(a);
+            double actual = getCalculatorInstance().sqrt(a);
             double delta = 0.0;
             Assert.assertEquals(actual, expected, delta);
         } catch (NumberFormatException e) {
@@ -33,7 +33,7 @@ public class SqrtTest extends BaseCalculationTest {
 
     @Test
     public void testSqrtWithNegativeNumber() {
-        Assert.assertTrue(Double.isNaN(calculator.sqrt(-4.0)), "Expected NaN!");
+        Assert.assertTrue(Double.isNaN(getCalculatorInstance().sqrt(-4.0)), "Expected NaN!");
     }
 
 }

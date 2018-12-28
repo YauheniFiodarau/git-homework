@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="UnitCalcTest">
-    <test name="Calculator" >
+    <test name="Calculator" parallel="classes">
         <classes>
             <class name="by.fiodarau.CosTest"/>
             <class name="by.fiodarau.SinTest"/>
@@ -22,29 +22,29 @@
         </classes>
     </test>
 
-    <!--<test name="OnlyTrigonometry">-->
-        <!--<groups>-->
-            <!--<run>-->
-                <!--<include name="Trigonometry"/>-->
-                <!--<exclude name="Arithmetic"/>-->
-            <!--</run>-->
-        <!--</groups>-->
-        <!--<classes>-->
-            <!--<class name="by.fiodarau.CosTest"/>-->
-            <!--<class name="by.fiodarau.SinTest"/>-->
-            <!--<class name="by.fiodarau.CtgTest"/>-->
-            <!--<class name="by.fiodarau.TgTest"/>-->
-            <!--<class name="by.fiodarau.IsNegativeTest"/>-->
-            <!--<class name="by.fiodarau.IsPositiveTest"/>-->
-            <!--<class name="by.fiodarau.DivDoubleTest"/>-->
-            <!--<class name="by.fiodarau.DivLongTest"/>-->
-            <!--<class name="by.fiodarau.MultiplyDoubleTest"/>-->
-            <!--<class name="by.fiodarau.MultiplyLongTest"/>-->
-            <!--<class name="by.fiodarau.SqrtTest"/>-->
-            <!--<class name="by.fiodarau.SubDoubleTest"/>-->
-            <!--<class name="by.fiodarau.SubLongTest"/>-->
-            <!--<class name="by.fiodarau.SumLongTest"/>-->
-            <!--<class name="by.fiodarau.SumDoubleTest"/>-->
-        <!--</classes>-->
-    <!--</test>-->
+    <test name="OnlyTrigonometry" parallel="classes">
+        <groups>
+            <run>
+                <include name="Trigonometry"/>
+                <exclude name="Arithmetic"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="by.fiodarau.CosTest"/>
+            <class name="by.fiodarau.SinTest"/>
+            <class name="by.fiodarau.CtgTest"/>
+            <class name="by.fiodarau.TgTest"/>
+            <class name="by.fiodarau.IsNegativeTest"/>
+            <class name="by.fiodarau.IsPositiveTest"/>
+            <class name="by.fiodarau.DivDoubleTest"/>
+            <class name="by.fiodarau.DivLongTest"/>
+            <class name="by.fiodarau.MultiplyDoubleTest"/>
+            <class name="by.fiodarau.MultiplyLongTest"/>
+            <class name="by.fiodarau.SqrtTest"/>
+            <class name="by.fiodarau.SubDoubleTest"/>
+            <class name="by.fiodarau.SubLongTest"/>
+            <class name="by.fiodarau.SumLongTest"/>
+            <class name="by.fiodarau.SumDoubleTest"/>
+        </classes>
+    </test>
 </suite>

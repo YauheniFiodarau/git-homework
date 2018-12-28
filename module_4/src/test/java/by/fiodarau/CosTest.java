@@ -21,7 +21,7 @@ public class CosTest extends BaseCalculationTest {
         try {
             double a = Converter.toDouble(aObj);
             double expected = Converter.toDouble(expObj);
-            double actual = calculator.cos(a);
+            double actual = getCalculatorInstance().cos(a);
             double delta = 0.0;
             Assert.assertEquals(actual, expected, delta);
         } catch (NumberFormatException e) {

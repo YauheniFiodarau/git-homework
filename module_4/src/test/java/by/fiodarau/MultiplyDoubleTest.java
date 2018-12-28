@@ -24,7 +24,7 @@ public class MultiplyDoubleTest extends BaseCalculationTest {
             double b = Converter.toDouble(bObj);
             double expected = Converter.toDouble(expObj);
             double delta = 0.0;
-            double actual = calculator.mult(a, b);
+            double actual = getCalculatorInstance().mult(a, b);
             Assert.assertEquals(actual, expected, delta);
         } catch (NumberFormatException e) {
             org.testng.Assert.fail(e.getMessage());

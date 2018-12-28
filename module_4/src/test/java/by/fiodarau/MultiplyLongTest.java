@@ -23,7 +23,7 @@ public class MultiplyLongTest extends BaseCalculationTest {
             long a = Converter.toLong(aObj);
             long b = Converter.toLong(bObj);
             long expected = Converter.toLong(expObj);
-            long actual = calculator.mult(a, b);
+            long actual = getCalculatorInstance().mult(a, b);
             Assert.assertEquals(actual, expected);
         } catch (NumberFormatException e) {
             org.testng.Assert.fail(e.getMessage());

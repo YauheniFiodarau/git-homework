@@ -1,21 +1,22 @@
 package by.fiodarau;
 
 import com.epam.tat.module4.Calculator;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class BaseCalculationTest {
 
-    protected Calculator calculator;
-
-    @BeforeClass
-    public void initCalculator() {
-        calculator = new Calculator();
-    }
-
-    @AfterClass
-    public void tearDown() {
-        calculator = null;
-    }
+    private static Calculator calculatorInstance;
+    private static Lock lock = new ReentrantLock();
+    
+	public static Calculator getCalculatorInstance() {
+		if (calculatorInstance == null) {
+			lock.lock();
+			calculatorInstance = new Calculator();
+			lock.unlock();
+		}
+		return calculatorInstance;
+	}
 
 }

@@ -23,7 +23,7 @@ public class SubLongTest extends BaseCalculationTest {
             long a = Converter.toLong(aObj);
             long b = Converter.toLong(bObj);
             long expected = Converter.toLong(expObj);
-            long actual = calculator.sub(a, b);
+            long actual = getCalculatorInstance().sub(a, b);
             Assert.assertEquals(actual, expected);
         } catch (NumberFormatException e) {
             Assert.fail(e.getMessage());

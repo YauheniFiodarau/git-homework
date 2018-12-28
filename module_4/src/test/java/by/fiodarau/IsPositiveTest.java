@@ -22,7 +22,7 @@ public class IsPositiveTest extends BaseCalculationTest {
         try {
             long a = Converter.toLong(aObj);
             boolean expected = Boolean.valueOf(expObj.toString());
-            boolean actualAngle = calculator.isPositive(a);
+            boolean actualAngle = getCalculatorInstance().isPositive(a);
             Assert.assertEquals(actualAngle, expected);
         } catch (NumberFormatException e) {
             Assert.fail(e.getMessage());

@@ -1,8 +1,6 @@
 package by.fiodarau;
 
-import com.epam.tat.module4.Calculator;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import util.Converter;
@@ -23,7 +21,7 @@ public class SinTest extends BaseCalculationTest {
         try {
             double a = Converter.toDouble(aObj);
             double expected = Converter.toDouble(expObj);
-            double actual = calculator.sin(a);
+            double actual = getCalculatorInstance().sin(a);
             double delta = 0.0;
             Assert.assertEquals(actual, expected, delta);
         } catch (NumberFormatException e) {

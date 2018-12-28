@@ -23,7 +23,7 @@ public class IsNegativeTest extends BaseCalculationTest {
         try {
             long a = Converter.toLong(aObj);
             boolean expected = Boolean.valueOf(expObj.toString());
-            boolean actualAngle = calculator.isNegative(a);
+            boolean actualAngle = getCalculatorInstance().isNegative(a);
             Assert.assertEquals(actualAngle, expected);
         } catch (NumberFormatException e) {
             Assert.fail(e.getMessage());
