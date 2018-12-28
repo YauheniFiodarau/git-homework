@@ -1,6 +1,5 @@
 *.db
 *.log
-/target
 /bin
 test-output/
 .classpath
@@ -8,3 +7,5 @@ test-output/
 .idea/
 *.iml
 *.html
+.settings/
+target/
