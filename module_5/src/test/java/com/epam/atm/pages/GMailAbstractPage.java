@@ -51,7 +51,7 @@ public class GMailAbstractPage {
         new Actions(webDriver).sendKeys(element, text).build().perform();
     }
 
-    public Actions getActions(){
+    public Actions getActions() {
         return new Actions(webDriver);
     }
 }

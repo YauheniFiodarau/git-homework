@@ -16,7 +16,7 @@
             <DefaultRolloverStrategy max="4"/>
         </RollingFile>
     </Appenders>
-
+    
     <Loggers>
         <Root level="debug">
             <AppenderRef ref="Console"/>

@@ -17,14 +17,14 @@ public class GMailLoginPage extends GMailAbstractPage {
     @FindBy(css = "div#passwordNext")
     private WebElement signInBtn;
 
-    public GMailLoginPage enterAccountName(String accountName){
+    public GMailLoginPage enterAccountName(String accountName) {
         waitingForAppearanceElement(emailInput);
         typeInElement(emailInput, accountName);
         clickOnElement(nextBtn);
         return this;
     }
 
-    public GMailBoxPage enterPassword(String pwd){
+    public GMailBoxPage enterPassword(String pwd) {
         waitingForAppearanceElement(pwdInput);
         typeInElement(pwdInput, pwd);
         clickOnElement(signInBtn);
